@@ -1,0 +1,47 @@
+package com.zumbaapp.servlet.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class DB {
+
+		Connection connection;
+		PreparedStatement preparedStatement;
+		
+		public DB() {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				System.out.println("[DB] Driver Loaded");
+				
+				connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/?user=root", "root", "201155876");
+				System.out.println("[DB] Connection created");
+			}
+			catch(Exception e) {
+				System.out.println("Something went wrong: " + e);
+			}
+		}
+			
+		public void closeConnection() {
+			try {
+				connection.close();
+				System.out.println("[DB] Connection to DB closed");
+			}
+			catch(Exception e) {
+				System.out.println("Something went wrong: " + e);
+			}
+		}
+		
+//		public int addClass(Class class) {
+//			int result = 0;
+//			
+//			try {
+//			String sql = "insert into Classes values(null, ?, ?, ?, ?, ?, ?, ?)";
+//			preparedStatement = connection.prepareStatement(sql);
+//			preparedStatement.setInt(1, class.id)result;
+//			}
+//			catch(Exception e) {
+//				System.out.println("Something went wrong: " + e);
+//			}
+//		}
+}

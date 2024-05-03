@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<center>
+		<h3>Zumba by Rohit</h3>
+		<a href="Welcome">Welcome Servlet</a>
+		<h3>Register</h3>
+		<form action="Register" method="post">
+			<b>Email:</b><br>
+			<input type="text" name="txtEmail" placeholder="e.g. john@example.com"/><br><br>
+			<b>Password:</b><br>
+			<input type="password" name="txtPassword" placeholder="min 6 characters"/><br><br>
+			<input type="submit" value="LOGIN"/>
+		</form>
+		<a href="Front">Welcome FrontController</a>
+	</center>
+</body>
+</html> 

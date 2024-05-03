@@ -1,0 +1,71 @@
+package com.zumbaapp.servlet.controller;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import com.zumbaapp.servlet.db.DB;
+import com.zumbaapp.servlet.model.Classes;
+
+/**
+ * Servlet implementation class EditClassesController
+ */
+@WebServlet("/editClasses")
+public class EditClassesController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    response.setContentType("text/html");
+	    PrintWriter out = response.getWriter();
+	    String idStr = request.getParameter("id");
+	    if (idStr == null || idStr.isEmpty()) {
+	        out.print("Class ID is missing.");
+	        return;
+	    }
+
+	    try {
+	        int id = Integer.parseInt(idStr);
+	        DB db = new DB();
+	        Classes classes = db.fetchClass(id);
+	        if (classes == null) {
+	            out.print("No class found with ID: " + id);
+	            return;
+	        }
+
+	        // Form generation code here (as previously)
+	    } catch (NumberFormatException e) {
+	        out.print("Invalid class ID. Please provide a numeric ID.");
+	    }
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    int id = Integer.parseInt(request.getParameter("ID")); // Ensure this matches your form input names.
+	    String name = request.getParameter("Name");
+	    String session = request.getParameter("Session");
+	    String date = request.getParameter("Date");
+	    String startTime = request.getParameter("StartTime");
+	    String endTime = request.getParameter("EndTime");
+	    String location = request.getParameter("Location");
+
+	    Classes updatedClass = new Classes(id, name, session, date, startTime, endTime, location);
+	    DB db = new DB();
+	    boolean updateSuccess = db.updateClass(updatedClass);
+
+	    response.setContentType("text/html");
+	    PrintWriter out = response.getWriter();
+	    if (updateSuccess) {
+	        out.print("Class updated successfully!");
+	        // Redirect or further handling here
+	    } else {
+	        out.print("Failed to update class.");
+	        // Handle failure case here
+	    }
+	}
+
+}

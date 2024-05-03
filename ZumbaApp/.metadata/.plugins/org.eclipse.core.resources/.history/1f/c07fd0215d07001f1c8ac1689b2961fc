@@ -1,0 +1,8 @@
+package com.zumbaapp.servlet.model;
+
+public class Participant {
+	
+	int id;
+	
+
+}

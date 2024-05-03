@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="css/bootstrap.css"></link>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel"> 
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/Zumba_4.png" class="img-fluid" width="150%" height="300px" class="hero">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1 class="hero-text">Welcome</h1>
+                <h1 class="hero-text">Admin</h1>
+                <br>
+                <a class="w-50 btn btn-lg btn-primary button mt-4 mb-2" href="add-class.html">Add Class</a>
+                <a class="w-50 btn btn-lg btn-primary button mt-2 mb-2" href="ViewClasses.jsp">View Classes</a>
+                <a class="w-50 btn btn-lg btn-primary button my-2" href="add-participant.html">Add Participant</a>
+                <a class="w-50 btn btn-lg btn-primary button my-2" href="ViewParticipants.jsp">View Participants</a>
+              </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>

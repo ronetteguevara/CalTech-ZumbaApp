@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zumba by Rohit</title>
+<link rel="stylesheet" href="css/bootstrap.css"></link>
+<link rel="stylesheet" href="style.css"></link>
+</head>
+<body class="gradient-background">
+	<nav class="navbar navbar-expand navbar-custom px-4">
+      <a class="navbar-brand navbar-custom" href="index.html">Zumba by Rohit</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Classes">Classes</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	<div class="my-4 d-flex justify-content-center col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" data-new-gr-c-s-check-loaded="14.1169.0" data-gr-ext-installed="">
+	<main class="form-signin d-flex justify-content-center">
+	<form action="Login" method="post">
+		<div class="card" style="width: 25rem;">
+			<img src="assets/Hero_Rohit.png" class="card-img-top" alt="Rohit smiling">
+		<div class="card-body text-center">
+			<h1 class="mt-4 mb-4 fw-normal text-center">Zumba by Rohit</h1>
+			<div class="form-floating mx-4 my-4">
+				<input type="email" name="txtEmail" class="form-control input" id="floatingInput" placeholder="name@example.com">
+				<label for="floatingInput">Email address</label>
+			</div>
+			
+			<div class="form-floating mx-4 my-4">
+				<input type="password" name="txtPassword" class="form-control input" id="floatingPassword" placeholder="Password">
+				<label for="floatingPassword">Password</label>
+			</div>
+			
+			<div class="mx-4 my-4">
+			<button class="w-100 btn btn-lg btn-primary button" type="submit">Sign in</button>
+			</div>
+			<div class="my-4">
+			<a href="register.html">New User? Register Here</a>
+			</div>
+		</div>
+		</div>
+    </form>
+    </main>
+    </div>
+</body>
+</html> 
