@@ -1,7 +1,0 @@
-package com.zumbaapp.servlet.model;
-
-public class Class {
-
-	int id;
-	
-}

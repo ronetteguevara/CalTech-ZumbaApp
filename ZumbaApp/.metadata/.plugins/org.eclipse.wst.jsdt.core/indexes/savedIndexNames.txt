@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+/Users/ronetteestrellaguevara/Documents/ZumbaApp/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-726103126.index
-462884524.index
-1555295620.index
-728968429.index
-684536592.index
-3318194452.index
-3485005300.index
